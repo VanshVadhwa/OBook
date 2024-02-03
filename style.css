@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    background: #efefef;
+    /* background-color: lightgrey;
+    background-color: #efefef; */
+}
+
+/* Here, nav becomes a flex conatiner as it has display: flex */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1876f2;
+    padding: 5px 5%;
+}
