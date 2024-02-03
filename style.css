@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: 'poppins', sans-serif;
+    /* It will maitain the constant properties in every web browser */
 }
 
 body{
@@ -13,8 +14,78 @@ body{
 /* Here, nav becomes a flex conatiner as it has display: flex */
 nav{
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
     background: #1876f2;
-    padding: 5px 5%;
+    /* The blue blackground is due to div only and we gave the color to it in CSS */
+    padding: 5px 5%; 
+    /* 5px: This specifies the padding value for the top and bottom sides of the element. It sets a fixed padding of 5 pixels.
+    5%: This specifies the padding value for the left and right sides of the element. It sets a padding relative to the width of the containing element, specifically 5% of the container's width. */
 }
+
+/* we used . as it is a class name */
+.logo{
+    width: 160px;
+    margin-right: 45px;
+    /* It reduced the size of the logo according to this code */
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+    /* These two properties made the three icongs place in front of logo from the bottom of it */
+}
+
+.nav-left ul li{
+    list-style: none;
+    display: inline-block;
+    /* Horizontally aligned here */
+}
+
+.nav-left ul li img{
+    width: 28px;
+    margin: 0 15px;
+    /* This gave a space between the icons */
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    /* Horizontally Aligned */
+}
+
+.nav-user-icon img{
+    width: 40px;
+    border-radius: 50%; 
+    /* 50% will make the image circular */
+    cursor: pointer;
+}
+
+.nav-user-icon {
+    margin-left: 20px;
+}
+
+.search-box{
+    background: #efefef;
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    /* Padding = 0 from top bottom and 15 from left right  */
+}
+
+.search-box img{
+    width: 18px;
+    /* Search Box width has increased a lot */
+}
+
+.search-box input{
+    width: 100%;
+    background: transparent;
+    padding: 10px;
+    outline: none;
+    border: 0;
+    /* It looks good now byiiiii */
+}
+
