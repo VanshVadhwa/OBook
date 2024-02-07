@@ -17,17 +17,21 @@ nav{
     align-items: center; 
     justify-content: space-between;
     background: #1876f2;
-    /* The blue blackground is due to div only and we gave the color to it in CSS */
+    /* The blue blackground is due to nav only and we gave the color to it in CSS */
     padding: 5px 5%; 
     /* 5px: This specifies the padding value for the top and bottom sides of the element. It sets a fixed padding of 5 pixels.
     5%: This specifies the padding value for the left and right sides of the element. It sets a padding relative to the width of the containing element, specifically 5% of the container's width. */
+    position: sticky;
+    z-index: 100;
+    /* When you set z-index: 1; on an element, you're specifying that it should appear above elements with a lower z-index value but below elements with a higher z-index value. This allows you to control the stacking order of elements on the page and determine which elements should appear in front of or behind others. */
 }
 
 /* we used . as it is a class name */
 .logo{
     width: 160px;
     margin-right: 45px;
-    /* It reduced the size of the logo according to this code */
+    /* margin-left: 10px; */
+    /* It reduced the size of the logo according to this code and also the distance with the icons */
 }
 
 .nav-left{
@@ -71,7 +75,9 @@ nav{
     border-radius: 20px;
     display: flex;
     align-items: center;
+    /* This helps in adding something within this */
     padding: 0 15px;
+    /* justify-content: space-between; */
     /* Padding = 0 from top bottom and 15 from left right  */
 }
 
@@ -86,6 +92,85 @@ nav{
     padding: 10px;
     outline: none;
     border: 0;
+    /* It edits all code of the input text */
     /* It looks good now byiiiii */
+}
+
+.online{
+    position: relative;
+}
+
+.online::after{
+    content: '';
+    width: 7px;
+    height: 7px;
+    border: 2px solid #fff;
+    /* #fff = White Color */
+    border-radius: 50%;
+    background: #41db51;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* This whole code is used to create that little green dot denoting the online status */
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 5%;
+}
+
+.left-sidebar{
+    /* background: #cbdffa; */
+    /* Light Blue Color */
+    flex-basis: 25%;
+    /*  In this case, the sidebar will initially occupy 25% of the available space along the main axis. */
+    position: sticky;
+    /* In this case, the sidebar will stick to the top of its containing block when the top edge of the sidebar reaches 70 pixels from the top of the viewport. */
+    top: 70px;
+    align-self: flex-start;
+    /* In a flex layout, align-self allows individual flex items to override the default alignment set by the container's align-items property. In this case, the sidebar will align itself to the start of the cross axis (top, if the main axis is horizontal) within its flex container. */
+    /* height: 100vh; */
+    /* By setting an element's height to 100vh, you ensure that the element takes up the entire vertical space of the viewport, making it cover the entire height of the visible area in the browser window.
+    It represent 100% of the viewport height */
+}
+
+.right-sidebar{
+    /* background: #cbdffa; */
+    flex-basis: 25%;
+    position: sticky;
+    top: 70px;
+    align-self: flex-start;
+    /* height: 100vh; */
+}
+
+.main-content{
+    flex-basis: 47%;
+    /* As 50% is already occupied above */
+}
+
+.imp-links a{
+    /* margin-top: 20px; */
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    color: #626262;
+    width: fit-content;
+}
+
+.imp-links a img{
+    width: 25px;
+    margin-right: 15px;
+}
+
+.imp-links a:last-child{
+    color: #1876f2;
+}
+
+.imp-links{
+    border-bottom: 2px solid #ccc; /* Grey Color */
+    /* A horizontal grey line under see more */
+    
 }
 
